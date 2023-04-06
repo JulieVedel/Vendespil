@@ -39,9 +39,9 @@ pink = (221, 83, 83)
 purple = (183, 62, 62)
 
 # Lyde
-wrongSound = pygame.mixer.Sound("D:\\Python\\Vendespil\\sounds\\fejl.wav")
-clickSound = pygame.mixer.Sound("D:\\Python\\Vendespil\\sounds\\klik.wav")
-correctSound = pygame.mixer.Sound("D:\\Python\\Vendespil\\sounds\\korrekt.wav")
+wrongSound = pygame.mixer.Sound("./sounds/fejl.wav")
+clickSound = pygame.mixer.Sound("./sounds/klik.wav")
+correctSound = pygame.mixer.Sound("./sounds/korrekt.wav")
 
 # Fonts
 titleFont = pygame.font.Font("freesansbold.ttf", 56)
@@ -56,7 +56,7 @@ def generateBoard():
     global optionsList
     global spaces
     global bestScore
-    highscoreFile = open("D:\\Python\\Vendespil\\highscore.txt", "r")
+    highscoreFile = open("./highscore.txt", "r")
     bestScore = int(highscoreFile.read())
     highscoreFile.close()
     for item in range(rows * cols // 2):
@@ -145,53 +145,53 @@ def playSound(sound):
 def numberToImage(number):
     match number:
         case 0:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\abrikos.jpg").convert()
+            return pygame.image.load("./picture/abrikos.jpg").convert()
         case 1:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\aeble.jpg").convert()
+            return pygame.image.load("./picture/aeble.jpg").convert()
         case 2:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\annanas.jpg").convert()
+            return pygame.image.load("./picture/annanas.jpg").convert()
         case 3:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\appelsin.jpg").convert()
+            return pygame.image.load("./picture/appelsin.jpg").convert()
         case 4:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\banan.jpg").convert()
+            return pygame.image.load("./picture/banan.jpg").convert()
         case 5:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\blaabaer.jpg").convert()
+            return pygame.image.load("./picture/blaabaer.jpg").convert()
         case 6:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\citron.jpg").convert()
+            return pygame.image.load("./picture/citron.jpg").convert()
         case 7:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\granataeble.jpg").convert()
+            return pygame.image.load("./picture/granataeble.jpg").convert()
         case 8:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\hindbaer.jpg").convert()
+            return pygame.image.load("./picture/hindbaer.jpg").convert()
         case 9:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\jordbaer.jpg").convert()
+            return pygame.image.load("./picture/jordbaer.jpg").convert()
         case 10:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\kakifrugt.jpg").convert()
+            return pygame.image.load("./picture/kakifrugt.jpg").convert()
         case 11:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\kirsebaer.jpg").convert()
+            return pygame.image.load("./picture/kirsebaer.jpg").convert()
         case 12:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\kiwi.jpg").convert()
+            return pygame.image.load("./picture/kiwi.jpg").convert()
         case 13:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\lime.jpg").convert()
+            return pygame.image.load("./picture/lime.jpg").convert()
         case 14:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\melon.jpg").convert()
+            return pygame.image.load("./picture/melon.jpg").convert()
         case 15:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\paerer.jpg").convert()
+            return pygame.image.load("./picture/paerer.jpg").convert()
         case 16:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\passionsfrugt.jpg").convert()
+            return pygame.image.load("./picture/passionsfrugt.jpg").convert()
         case 17:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\pomelo.jpg").convert()
+            return pygame.image.load("./picture/pomelo.jpg").convert()
         case 18:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\ribs.jpg").convert()
+            return pygame.image.load("./picture/ribs.jpg").convert()
         case 19:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\rosiner.jpg").convert()
+            return pygame.image.load("./picture/rosiner.jpg").convert()
         case 20:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\solbaer.jpg").convert()
+            return pygame.image.load("./picture/solbaer.jpg").convert()
         case 21:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\stikkelsbaer.jpg").convert()
+            return pygame.image.load("./picture/stikkelsbaer.jpg").convert()
         case 22:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\tranebaer.jpg").convert()
+            return pygame.image.load("./picture/tranebaer.jpg").convert()
         case 23:
-            return pygame.image.load("D:\\Python\\Vendespil\\picture\\vindruer.jpg").convert()
+            return pygame.image.load("./picture/vindruer.jpg").convert()
 
 
 running = True
@@ -252,7 +252,7 @@ while running:
         screen.blit(winnerText, (10, HEIGHT - 290))
         if bestScore > score or bestScore == 0:
             bestScore = score
-            highscoreFile = open("D:\\Python\\Vendespil\\highscore.txt", "w")
+            highscoreFile = open("./highscore.txt", "w")
             highscoreFile.write(str(bestScore))
             highscoreFile.close()
 
